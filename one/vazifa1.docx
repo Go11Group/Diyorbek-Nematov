@@ -1,2 +1,45 @@
-git add .
+﻿git add .
 git commit -m "Our first commit"
+
+git checkout -b develop
+
+nano main.go
+
+.
+
+git add main.go
+git commit -m “Feature-branchda main.go fayliga o’zgartirish kiritildi”
+
+git checkout main
+git merge feature-branch
+
+.
+
+git checkout feature-branch
+nano main.go
+
+.
+git add .
+
+Git commit -m “Changed from feature-branch”
+
+git checkout main
+
+.
+
+git add main.go
+git commit -m “Changed from main branch”
+git merge feature-branch
+
+.
+
+nano main.go
+.
+
+.
+
+git add main.go
+
+git commit -m “Conflict to’g’irlandi”
+
+
