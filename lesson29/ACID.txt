@@ -1,0 +1,24 @@
+ACID – bu ma'lumotlar bazasi tranzaksiyalarining to'rt asosiy xususiyatlarini ifodalovchi qistqartma ya'ni bosh harlasri. ACID xususiyatlari ma'lumotlar bazasi tizimlarining ishonchliligi va ma'lumotlarning yaxlitligini ta'minlash uchun muhimdir. Bu xususiyatlar quyidagilar:
+
+Atomicity (Atomiklik):
+
+Atomiklik shuni anglatadiki, tranzaksiya butunlay bajarilishi yoki umuman bajarilmasligi kerak. Agar tranzaksiyaning bir qismi muvaffaqiyatsiz bo'lsa, butun tranzaksiya bekor qilinadi va ma'lumotlar bazasi tranzaksiyadan oldingi holatiga qaytariladi. Bu, tranzaksiyaning barcha operatsiyalari muvaffaqiyatli bajarilganini yoki birortasi ham bajarilmaganligini ta'minlaydi.
+
+
+Consistency (Izchillik):
+
+Izchillik shuni anglatadiki, tranzaksiya yakunlangach, ma'lumotlar bazasi izchil holatda bo'lishi kerak. Tranzaksiya ma'lumotlar bazasining qoidalari, cheklovlari va integrititini buzmasligi kerak. Tranzaksiya boshlanishdan oldin va tugagandan keyin ma'lumotlar bazasi izchil bo'lishi kerak.
+
+
+Isolation (Izolyatsiya):
+
+Izolyatsiya shuni anglatadiki, bir tranzaksiya boshqa tranzaksiyalarning ta'siridan himoyalangan holda bajarilishi kerak. Bir vaqtning o'zida bajarilayotgan tranzaksiyalar bir-biriga ta'sir qilmasligi kerak, shunda har bir tranzaksiya yakunlangach, natijalar go'yo ular ketma-ket bajarilgandek bo'ladi.
+
+
+Durability (Barqarorlik):
+
+Barqarorlik shuni anglatadiki, tranzaksiya muvaffaqiyatli yakunlangach, uning natijalari saqlanib qoladi va tizim xatosi, quvvatning uzilishi yoki boshqa nosozliklar yuz bergan taqdirda ham yo'qolmaydi. Tranzaksiya natijalari doimiy ravishda ma'lumotlar bazasida saqlanadi.
+
+
+Bu xususiyatlar ma'lumotlar bazasi tizimlarining ishonchliligi va ma'lumotlarning yaxlitligini ta'minlash uchun zarurdir. 
+ACID xususiyatlariga ega bo'lgan tizimlar tranzaksiyalarni xavfsiz va ishonchli bajarilishi uchun mo'ljallangan.
