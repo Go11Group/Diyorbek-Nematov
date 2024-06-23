@@ -1,0 +1,82 @@
+INSERT INTO cards (user_id, number) VALUES 
+('4cd21af2-9041-40af-8a19-52d4d6c3f381', '1111222233334444'),
+('623b42ab-3c32-4434-b79e-a77560b37c9b', '2222333344445555'),
+('4ec88386-ec79-41ea-8715-488c3b10575b', '3333444455556666'),
+('0f83f2da-d253-4cf7-ad1e-2a3c50fae13a', '4444555566667777'),
+('04df3d06-6ba7-4a8f-a64d-4db6e174acc2', '5555666677778888'),
+('85bc18ad-1d0d-4396-83c6-5adb57b406d3', '6666777788889999'),
+('a88a09e3-cc74-4642-badb-4e689c042c53', '7777888899990000'),
+('426fe9f3-308d-4b4e-b8ec-48d7aad9c18a', '8888999900001111'),
+('c8a846da-af85-4bd7-a61c-538017792714', '9999000011112222'),
+('ca64ece6-3573-43fa-899a-1e57e571489c', '0000111122223333');
+
+7b53e6df-692e-442c-9ac7-e93fbcad7b2c
+697296bb-f725-4cbd-97b2-063f2f9073f5
+4dcfa38a-bc18-4dfe-a26c-87beabcc113f
+d25675d2-8f4f-4dd5-97ed-cbddcfec1778
+8f72fd0d-35e7-4ec3-a5a1-a7c7a23201e4
+cbf1f9e6-4951-4400-8867-50bcca2398d6
+a193ac04-f392-4f7e-8ee4-53f96873c6d3
+f2ee929b-f82d-4aaf-84ad-208f294a3066
+4155395a-e978-4a70-85f5-ebc415555fc2
+f60cbde1-c6a6-48aa-86c8-f56d21abf52f
+
+INSERT INTO station (name) VALUES 
+('Station A'),
+('Station B'),
+('Station C'),
+('Station D'),
+('Station E'),
+('Station F'),
+('Station G'),
+('Station H'),
+('Station I'),
+('Station J');
+
+723529ad-2e88-45ee-b07a-8862c0c8af37
+f490885a-3af4-4cd6-8ecb-fc70e09b16c5
+f4717e1e-7fcc-4a26-bbf9-635c498b5f01
+1c9b861b-c185-495b-af42-8f4caa09aadf
+ec14c281-3b5b-4f18-a34b-a9164be2d345
+3f8a003a-9ab6-4d10-8b9b-3131634abcc3
+e789bf68-706f-49cc-9736-f9b4d6325d00
+13c3eae1-770e-485e-b122-fe38ccee2fd6
+0026a193-531a-4871-8f86-9eb9025a0c3b
+ff044b14-203f-479d-9a46-5e30b4f55af5
+
+INSERT INTO terminal (station_id) VALUES 
+('723529ad-2e88-45ee-b07a-8862c0c8af37'),
+('f490885a-3af4-4cd6-8ecb-fc70e09b16c5'),
+('f4717e1e-7fcc-4a26-bbf9-635c498b5f01'),
+('1c9b861b-c185-495b-af42-8f4caa09aadf'),
+('ec14c281-3b5b-4f18-a34b-a9164be2d345'),
+('3f8a003a-9ab6-4d10-8b9b-3131634abcc3'),
+('e789bf68-706f-49cc-9736-f9b4d6325d00'),
+('13c3eae1-770e-485e-b122-fe38ccee2fd6'),
+('0026a193-531a-4871-8f86-9eb9025a0c3b'),
+('ff044b14-203f-479d-9a46-5e30b4f55af5');
+
+619c37f6-6482-4a5b-823c-d2b8d4e2698e
+c2597221-dc00-4b52-92be-3d76cb18ee3a
+76e18ccb-8017-47d6-9b4b-07199f8805d6
+b2d203db-d8e9-4f2b-ae36-801a6f99994c
+2a09c3fd-265c-4ee6-b421-897ae6918576
+7bcb7728-3f4d-43df-81aa-8371bd5050d9
+17996f57-8242-4ae7-abd4-6b5002effb06
+b9acb406-9d4a-4fcc-9e40-a76a999fcc84
+7b96e73b-7c2f-4683-828f-fb886954454b
+1e44f95b-0ad6-4419-9e6d-01d064e4bff6
+
+INSERT INTO transactions (card_id, terminal_id, amount, type) VALUES 
+('7b53e6df-692e-442c-9ac7-e93fbcad7b2c', '619c37f6-6482-4a5b-823c-d2b8d4e2698e', 100.00, 'debit'),
+('697296bb-f725-4cbd-97b2-063f2f9073f5', 'c2597221-dc00-4b52-92be-3d76cb18ee3a', 200.00, 'debit'),
+('4dcfa38a-bc18-4dfe-a26c-87beabcc113f', '76e18ccb-8017-47d6-9b4b-07199f8805d6', 150.00, 'debit'),
+('d25675d2-8f4f-4dd5-97ed-cbddcfec1778', 'b2d203db-d8e9-4f2b-ae36-801a6f99994c', 175.00, 'debit'),
+('8f72fd0d-35e7-4ec3-a5a1-a7c7a23201e4', '2a09c3fd-265c-4ee6-b421-897ae6918576', 220.00, 'debit'),
+('cbf1f9e6-4951-4400-8867-50bcca2398d6', '7bcb7728-3f4d-43df-81aa-8371bd5050d9', 190.00, 'debit'),
+('a193ac04-f392-4f7e-8ee4-53f96873c6d3', '17996f57-8242-4ae7-abd4-6b5002effb06', 130.00, 'debit'),
+('f2ee929b-f82d-4aaf-84ad-208f294a3066', 'b9acb406-9d4a-4fcc-9e40-a76a999fcc84', 160.00, 'debit'),
+('4155395a-e978-4a70-85f5-ebc415555fc2', '7b96e73b-7c2f-4683-828f-fb886954454b', 210.00, 'debit'),
+('f60cbde1-c6a6-48aa-86c8-f56d21abf52f', '1e44f95b-0ad6-4419-9e6d-01d064e4bff6', 140.00, 'debit');
+
+
