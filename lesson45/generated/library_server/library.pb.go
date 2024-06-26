@@ -130,7 +130,7 @@ func (x *AddBookResponse) GetBookId() string {
 	return ""
 }
 
-type SearhcBookRequest struct {
+type SearchBookRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -138,8 +138,8 @@ type SearhcBookRequest struct {
 	Query string `protobuf:"bytes,1,opt,name=query,proto3" json:"query,omitempty"`
 }
 
-func (x *SearhcBookRequest) Reset() {
-	*x = SearhcBookRequest{}
+func (x *SearchBookRequest) Reset() {
+	*x = SearchBookRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_library_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -147,13 +147,13 @@ func (x *SearhcBookRequest) Reset() {
 	}
 }
 
-func (x *SearhcBookRequest) String() string {
+func (x *SearchBookRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*SearhcBookRequest) ProtoMessage() {}
+func (*SearchBookRequest) ProtoMessage() {}
 
-func (x *SearhcBookRequest) ProtoReflect() protoreflect.Message {
+func (x *SearchBookRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_library_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -165,19 +165,19 @@ func (x *SearhcBookRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use SearhcBookRequest.ProtoReflect.Descriptor instead.
-func (*SearhcBookRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use SearchBookRequest.ProtoReflect.Descriptor instead.
+func (*SearchBookRequest) Descriptor() ([]byte, []int) {
 	return file_library_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *SearhcBookRequest) GetQuery() string {
+func (x *SearchBookRequest) GetQuery() string {
 	if x != nil {
 		return x.Query
 	}
 	return ""
 }
 
-type SearhcBookResponse struct {
+type SearchBookResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -185,8 +185,8 @@ type SearhcBookResponse struct {
 	Books []*Book `protobuf:"bytes,1,rep,name=books,proto3" json:"books,omitempty"`
 }
 
-func (x *SearhcBookResponse) Reset() {
-	*x = SearhcBookResponse{}
+func (x *SearchBookResponse) Reset() {
+	*x = SearchBookResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_library_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -194,13 +194,13 @@ func (x *SearhcBookResponse) Reset() {
 	}
 }
 
-func (x *SearhcBookResponse) String() string {
+func (x *SearchBookResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*SearhcBookResponse) ProtoMessage() {}
+func (*SearchBookResponse) ProtoMessage() {}
 
-func (x *SearhcBookResponse) ProtoReflect() protoreflect.Message {
+func (x *SearchBookResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_library_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -212,19 +212,19 @@ func (x *SearhcBookResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use SearhcBookResponse.ProtoReflect.Descriptor instead.
-func (*SearhcBookResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use SearchBookResponse.ProtoReflect.Descriptor instead.
+func (*SearchBookResponse) Descriptor() ([]byte, []int) {
 	return file_library_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *SearhcBookResponse) GetBooks() []*Book {
+func (x *SearchBookResponse) GetBooks() []*Book {
 	if x != nil {
 		return x.Books
 	}
 	return nil
 }
 
-type BarrowBookRequest struct {
+type BorrowBookRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -233,8 +233,8 @@ type BarrowBookRequest struct {
 	UserId string `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 }
 
-func (x *BarrowBookRequest) Reset() {
-	*x = BarrowBookRequest{}
+func (x *BorrowBookRequest) Reset() {
+	*x = BorrowBookRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_library_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -242,13 +242,13 @@ func (x *BarrowBookRequest) Reset() {
 	}
 }
 
-func (x *BarrowBookRequest) String() string {
+func (x *BorrowBookRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*BarrowBookRequest) ProtoMessage() {}
+func (*BorrowBookRequest) ProtoMessage() {}
 
-func (x *BarrowBookRequest) ProtoReflect() protoreflect.Message {
+func (x *BorrowBookRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_library_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -260,26 +260,26 @@ func (x *BarrowBookRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use BarrowBookRequest.ProtoReflect.Descriptor instead.
-func (*BarrowBookRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use BorrowBookRequest.ProtoReflect.Descriptor instead.
+func (*BorrowBookRequest) Descriptor() ([]byte, []int) {
 	return file_library_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *BarrowBookRequest) GetBookId() string {
+func (x *BorrowBookRequest) GetBookId() string {
 	if x != nil {
 		return x.BookId
 	}
 	return ""
 }
 
-func (x *BarrowBookRequest) GetUserId() string {
+func (x *BorrowBookRequest) GetUserId() string {
 	if x != nil {
 		return x.UserId
 	}
 	return ""
 }
 
-type BarrowBookResponse struct {
+type BorrowBookResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -287,8 +287,8 @@ type BarrowBookResponse struct {
 	Success bool `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
 }
 
-func (x *BarrowBookResponse) Reset() {
-	*x = BarrowBookResponse{}
+func (x *BorrowBookResponse) Reset() {
+	*x = BorrowBookResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_library_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -296,13 +296,13 @@ func (x *BarrowBookResponse) Reset() {
 	}
 }
 
-func (x *BarrowBookResponse) String() string {
+func (x *BorrowBookResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*BarrowBookResponse) ProtoMessage() {}
+func (*BorrowBookResponse) ProtoMessage() {}
 
-func (x *BarrowBookResponse) ProtoReflect() protoreflect.Message {
+func (x *BorrowBookResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_library_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -314,12 +314,12 @@ func (x *BarrowBookResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use BarrowBookResponse.ProtoReflect.Descriptor instead.
-func (*BarrowBookResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use BorrowBookResponse.ProtoReflect.Descriptor instead.
+func (*BorrowBookResponse) Descriptor() ([]byte, []int) {
 	return file_library_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *BarrowBookResponse) GetSuccess() bool {
+func (x *BorrowBookResponse) GetSuccess() bool {
 	if x != nil {
 		return x.Success
 	}
@@ -411,18 +411,18 @@ var file_library_proto_rawDesc = []byte{
 	0x64, 0x22, 0x2a, 0x0a, 0x0f, 0x41, 0x64, 0x64, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x73, 0x70,
 	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x17, 0x0a, 0x07, 0x62, 0x6f, 0x6f, 0x6b, 0x5f, 0x69, 0x64, 0x18,
 	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x62, 0x6f, 0x6f, 0x6b, 0x49, 0x64, 0x22, 0x29, 0x0a,
-	0x11, 0x53, 0x65, 0x61, 0x72, 0x68, 0x63, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x11, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65,
 	0x73, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x71, 0x75, 0x65, 0x72, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28,
 	0x09, 0x52, 0x05, 0x71, 0x75, 0x65, 0x72, 0x79, 0x22, 0x3b, 0x0a, 0x12, 0x53, 0x65, 0x61, 0x72,
-	0x68, 0x63, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x25,
+	0x63, 0x68, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x25,
 	0x0a, 0x05, 0x62, 0x6f, 0x6f, 0x6b, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0f, 0x2e,
 	0x67, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2e, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x05,
-	0x62, 0x6f, 0x6f, 0x6b, 0x73, 0x22, 0x45, 0x0a, 0x11, 0x42, 0x61, 0x72, 0x72, 0x6f, 0x77, 0x42,
+	0x62, 0x6f, 0x6f, 0x6b, 0x73, 0x22, 0x45, 0x0a, 0x11, 0x42, 0x6f, 0x72, 0x72, 0x6f, 0x77, 0x42,
 	0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x62, 0x6f,
 	0x6f, 0x6b, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x62, 0x6f, 0x6f,
 	0x6b, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x2e, 0x0a, 0x12,
-	0x42, 0x61, 0x72, 0x72, 0x6f, 0x77, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x42, 0x6f, 0x72, 0x72, 0x6f, 0x77, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
 	0x73, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x18, 0x01, 0x20,
 	0x01, 0x28, 0x08, 0x52, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x22, 0x74, 0x0a, 0x04,
 	0x42, 0x6f, 0x6f, 0x6b, 0x12, 0x17, 0x0a, 0x07, 0x62, 0x6f, 0x6f, 0x6b, 0x5f, 0x69, 0x64, 0x18,
@@ -437,15 +437,15 @@ var file_library_proto_rawDesc = []byte{
 	0x12, 0x19, 0x2e, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2e, 0x41, 0x64, 0x64,
 	0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1a, 0x2e, 0x67, 0x65,
 	0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2e, 0x41, 0x64, 0x64, 0x42, 0x6f, 0x6f, 0x6b, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x49, 0x0a, 0x0a, 0x53, 0x65, 0x61, 0x72, 0x68,
-	0x63, 0x42, 0x6f, 0x6f, 0x6b, 0x12, 0x1c, 0x2e, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65,
-	0x64, 0x2e, 0x53, 0x65, 0x61, 0x72, 0x68, 0x63, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x49, 0x0a, 0x0a, 0x53, 0x65, 0x61, 0x72, 0x63,
+	0x68, 0x42, 0x6f, 0x6f, 0x6b, 0x12, 0x1c, 0x2e, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65,
+	0x64, 0x2e, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x71, 0x75,
 	0x65, 0x73, 0x74, 0x1a, 0x1d, 0x2e, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2e,
-	0x53, 0x65, 0x61, 0x72, 0x68, 0x63, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x12, 0x49, 0x0a, 0x0a, 0x42, 0x61, 0x72, 0x72, 0x6f, 0x77, 0x42, 0x6f, 0x6f, 0x6b,
-	0x12, 0x1c, 0x2e, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2e, 0x42, 0x61, 0x72,
+	0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x12, 0x49, 0x0a, 0x0a, 0x42, 0x6f, 0x72, 0x72, 0x6f, 0x77, 0x42, 0x6f, 0x6f, 0x6b,
+	0x12, 0x1c, 0x2e, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2e, 0x42, 0x6f, 0x72,
 	0x72, 0x6f, 0x77, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1d,
-	0x2e, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2e, 0x42, 0x61, 0x72, 0x72, 0x6f,
+	0x2e, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2e, 0x42, 0x6f, 0x72, 0x72, 0x6f,
 	0x77, 0x42, 0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x1d, 0x5a,
 	0x1b, 0x2e, 0x2f, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x2f, 0x6c, 0x69, 0x62,
 	0x72, 0x61, 0x72, 0x79, 0x5f, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2f, 0x62, 0x06, 0x70, 0x72,
@@ -468,20 +468,20 @@ var file_library_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_library_proto_goTypes = []interface{}{
 	(*AddBookRequest)(nil),     // 0: generated.AddBookRequest
 	(*AddBookResponse)(nil),    // 1: generated.AddBookResponse
-	(*SearhcBookRequest)(nil),  // 2: generated.SearhcBookRequest
-	(*SearhcBookResponse)(nil), // 3: generated.SearhcBookResponse
-	(*BarrowBookRequest)(nil),  // 4: generated.BarrowBookRequest
-	(*BarrowBookResponse)(nil), // 5: generated.BarrowBookResponse
+	(*SearchBookRequest)(nil),  // 2: generated.SearchBookRequest
+	(*SearchBookResponse)(nil), // 3: generated.SearchBookResponse
+	(*BorrowBookRequest)(nil),  // 4: generated.BorrowBookRequest
+	(*BorrowBookResponse)(nil), // 5: generated.BorrowBookResponse
 	(*Book)(nil),               // 6: generated.Book
 }
 var file_library_proto_depIdxs = []int32{
-	6, // 0: generated.SearhcBookResponse.books:type_name -> generated.Book
+	6, // 0: generated.SearchBookResponse.books:type_name -> generated.Book
 	0, // 1: generated.LibraryService.AddBook:input_type -> generated.AddBookRequest
-	2, // 2: generated.LibraryService.SearhcBook:input_type -> generated.SearhcBookRequest
-	4, // 3: generated.LibraryService.BarrowBook:input_type -> generated.BarrowBookRequest
+	2, // 2: generated.LibraryService.SearchBook:input_type -> generated.SearchBookRequest
+	4, // 3: generated.LibraryService.BorrowBook:input_type -> generated.BorrowBookRequest
 	1, // 4: generated.LibraryService.AddBook:output_type -> generated.AddBookResponse
-	3, // 5: generated.LibraryService.SearhcBook:output_type -> generated.SearhcBookResponse
-	5, // 6: generated.LibraryService.BarrowBook:output_type -> generated.BarrowBookResponse
+	3, // 5: generated.LibraryService.SearchBook:output_type -> generated.SearchBookResponse
+	5, // 6: generated.LibraryService.BorrowBook:output_type -> generated.BorrowBookResponse
 	4, // [4:7] is the sub-list for method output_type
 	1, // [1:4] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
@@ -520,7 +520,7 @@ func file_library_proto_init() {
 			}
 		}
 		file_library_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SearhcBookRequest); i {
+			switch v := v.(*SearchBookRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -532,7 +532,7 @@ func file_library_proto_init() {
 			}
 		}
 		file_library_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SearhcBookResponse); i {
+			switch v := v.(*SearchBookResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -544,7 +544,7 @@ func file_library_proto_init() {
 			}
 		}
 		file_library_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*BarrowBookRequest); i {
+			switch v := v.(*BorrowBookRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -556,7 +556,7 @@ func file_library_proto_init() {
 			}
 		}
 		file_library_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*BarrowBookResponse); i {
+			switch v := v.(*BorrowBookResponse); i {
 			case 0:
 				return &v.state
 			case 1:

@@ -13,6 +13,18 @@ type Server struct {
 }
 
 func (s *Server) AddBook(ctx context.Context, in *pb.AddBookRequest) (*pb.AddBookResponse, error) {
+	resp, err := s.Liblary.CreateBook(in)
+	return &pb.AddBookResponse{BookId: resp}, err
+}
 
-	return &pb.AddBookResponse{}, nil
+func (s *Server) SearchBook(ctx context.Context, in *pb.SearchBookRequest) (*pb.SearchBookResponse, error) {
+	resp, err := s.Liblary.GetBookById(in.Query)
+
+	return &pb.SearchBookResponse{Books: resp}, err
+}
+
+func (s *Server) BorrowBook(ctx context.Context, in *pb.BorrowBookRequest) (*pb.BorrowBookResponse, error) {
+	resp, err := s.Liblary.BorrowBook(in.UserId, in.BookId)
+	
+	return resp, err
 }

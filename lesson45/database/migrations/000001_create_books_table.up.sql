@@ -3,5 +3,6 @@ CREATE TABLE books (
     title VARCHAR(255) NOT NULL,
     author VARCHAR(255) NOT NULL,
     year_published INT,
-    available BOOLEAN DEFAULT TRUE
+    user_id UUID DEFAULT NULL,
+    is_rental BOOLEAN DEFAULT FALSE
 );

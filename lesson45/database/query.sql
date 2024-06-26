@@ -1,0 +1,16 @@
+INSERT INTO books (title, author, year_published, user_id, is_rental) VALUES
+('To Kill a Mockingbird', 'Harper Lee', 1960, 'cf512bd6-f078-43e5-9ec7-1e9d16b49879', false),
+('1984', 'George Orwell', 1949, 'c91e526a-c6ec-4bd0-9dc2-9b17e3cac3f1', true),
+('Pride and Prejudice', 'Jane Austen', 1813, NULL, false),
+('The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'bb1b1343-a4d0-458c-94e8-1f32f2fcc96c', true),
+('Moby-Dick', 'Herman Melville', 1851, NULL, false),
+('War and Peace', 'Leo Tolstoy', 1869, '7da3c69a-41d0-4275-9ffc-a4bf3f587414', true),
+('The Catcher in the Rye', 'J.D. Salinger', 1951, '11d9e053-3c5e-4d3b-96b0-99f28aaf6d3b', false),
+('The Lord of the Rings', 'J.R.R. Tolkien', 1954, NULL, false),
+('Harry Potter and the Philosophers Stone', 'J.K. Rowling', 1997, 'f00090a7-9687-44ea-90ce-f87e53645459', true),
+('The Hobbit', 'J.R.R. Tolkien', 1937, NULL, false),
+('Crime and Punishment', 'Fyodor Dostoevsky', 1866, '3333b6c8-0062-480a-a7fa-f66c901eac20', true),
+('The Odyssey', 'Homer', -800, NULL, false),
+('Brave New World', 'Aldous Huxley', 1932, '9a9dbc55-3683-4e2c-ad07-cd3461eb4864', true),
+('Wuthering Heights', 'Emily Brontë', 1847, NULL, false),
+('Jane Eyre', 'Charlotte Brontë', 1847, '9e101e73-4cd9-4e60-80e9-ce86a7bdb0d3', true);

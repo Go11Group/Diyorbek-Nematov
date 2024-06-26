@@ -23,8 +23,8 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type LibraryServiceClient interface {
 	AddBook(ctx context.Context, in *AddBookRequest, opts ...grpc.CallOption) (*AddBookResponse, error)
-	SearhcBook(ctx context.Context, in *SearhcBookRequest, opts ...grpc.CallOption) (*SearhcBookResponse, error)
-	BarrowBook(ctx context.Context, in *BarrowBookRequest, opts ...grpc.CallOption) (*BarrowBookResponse, error)
+	SearchBook(ctx context.Context, in *SearchBookRequest, opts ...grpc.CallOption) (*SearchBookResponse, error)
+	BorrowBook(ctx context.Context, in *BorrowBookRequest, opts ...grpc.CallOption) (*BorrowBookResponse, error)
 }
 
 type libraryServiceClient struct {
@@ -44,18 +44,18 @@ func (c *libraryServiceClient) AddBook(ctx context.Context, in *AddBookRequest, 
 	return out, nil
 }
 
-func (c *libraryServiceClient) SearhcBook(ctx context.Context, in *SearhcBookRequest, opts ...grpc.CallOption) (*SearhcBookResponse, error) {
-	out := new(SearhcBookResponse)
-	err := c.cc.Invoke(ctx, "/generated.LibraryService/SearhcBook", in, out, opts...)
+func (c *libraryServiceClient) SearchBook(ctx context.Context, in *SearchBookRequest, opts ...grpc.CallOption) (*SearchBookResponse, error) {
+	out := new(SearchBookResponse)
+	err := c.cc.Invoke(ctx, "/generated.LibraryService/SearchBook", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *libraryServiceClient) BarrowBook(ctx context.Context, in *BarrowBookRequest, opts ...grpc.CallOption) (*BarrowBookResponse, error) {
-	out := new(BarrowBookResponse)
-	err := c.cc.Invoke(ctx, "/generated.LibraryService/BarrowBook", in, out, opts...)
+func (c *libraryServiceClient) BorrowBook(ctx context.Context, in *BorrowBookRequest, opts ...grpc.CallOption) (*BorrowBookResponse, error) {
+	out := new(BorrowBookResponse)
+	err := c.cc.Invoke(ctx, "/generated.LibraryService/BorrowBook", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -67,8 +67,8 @@ func (c *libraryServiceClient) BarrowBook(ctx context.Context, in *BarrowBookReq
 // for forward compatibility
 type LibraryServiceServer interface {
 	AddBook(context.Context, *AddBookRequest) (*AddBookResponse, error)
-	SearhcBook(context.Context, *SearhcBookRequest) (*SearhcBookResponse, error)
-	BarrowBook(context.Context, *BarrowBookRequest) (*BarrowBookResponse, error)
+	SearchBook(context.Context, *SearchBookRequest) (*SearchBookResponse, error)
+	BorrowBook(context.Context, *BorrowBookRequest) (*BorrowBookResponse, error)
 	mustEmbedUnimplementedLibraryServiceServer()
 }
 
@@ -79,11 +79,11 @@ type UnimplementedLibraryServiceServer struct {
 func (UnimplementedLibraryServiceServer) AddBook(context.Context, *AddBookRequest) (*AddBookResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddBook not implemented")
 }
-func (UnimplementedLibraryServiceServer) SearhcBook(context.Context, *SearhcBookRequest) (*SearhcBookResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SearhcBook not implemented")
+func (UnimplementedLibraryServiceServer) SearchBook(context.Context, *SearchBookRequest) (*SearchBookResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SearchBook not implemented")
 }
-func (UnimplementedLibraryServiceServer) BarrowBook(context.Context, *BarrowBookRequest) (*BarrowBookResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method BarrowBook not implemented")
+func (UnimplementedLibraryServiceServer) BorrowBook(context.Context, *BorrowBookRequest) (*BorrowBookResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BorrowBook not implemented")
 }
 func (UnimplementedLibraryServiceServer) mustEmbedUnimplementedLibraryServiceServer() {}
 
@@ -116,38 +116,38 @@ func _LibraryService_AddBook_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
-func _LibraryService_SearhcBook_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SearhcBookRequest)
+func _LibraryService_SearchBook_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SearchBookRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(LibraryServiceServer).SearhcBook(ctx, in)
+		return srv.(LibraryServiceServer).SearchBook(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/generated.LibraryService/SearhcBook",
+		FullMethod: "/generated.LibraryService/SearchBook",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(LibraryServiceServer).SearhcBook(ctx, req.(*SearhcBookRequest))
+		return srv.(LibraryServiceServer).SearchBook(ctx, req.(*SearchBookRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _LibraryService_BarrowBook_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(BarrowBookRequest)
+func _LibraryService_BorrowBook_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BorrowBookRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(LibraryServiceServer).BarrowBook(ctx, in)
+		return srv.(LibraryServiceServer).BorrowBook(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/generated.LibraryService/BarrowBook",
+		FullMethod: "/generated.LibraryService/BorrowBook",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(LibraryServiceServer).BarrowBook(ctx, req.(*BarrowBookRequest))
+		return srv.(LibraryServiceServer).BorrowBook(ctx, req.(*BorrowBookRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -164,12 +164,12 @@ var LibraryService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _LibraryService_AddBook_Handler,
 		},
 		{
-			MethodName: "SearhcBook",
-			Handler:    _LibraryService_SearhcBook_Handler,
+			MethodName: "SearchBook",
+			Handler:    _LibraryService_SearchBook_Handler,
 		},
 		{
-			MethodName: "BarrowBook",
-			Handler:    _LibraryService_BarrowBook_Handler,
+			MethodName: "BorrowBook",
+			Handler:    _LibraryService_BorrowBook_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

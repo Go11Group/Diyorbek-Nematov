@@ -6,8 +6,8 @@ package generated;
 
 service LibraryService {
     rpc AddBook(AddBookRequest) returns (AddBookResponse);
-    rpc SearhcBook(SearhcBookRequest) returns (SearhcBookResponse);
-    rpc BarrowBook(BarrowBookRequest) returns (BarrowBookResponse);
+    rpc SearchBook(SearchBookRequest) returns (SearchBookResponse);
+    rpc BorrowBook(BorrowBookRequest) returns (BorrowBookResponse);
 }
 
 message AddBookRequest {
@@ -20,20 +20,20 @@ message AddBookResponse {
     string book_id = 1;
 }
 
-message SearhcBookRequest {
+message SearchBookRequest {
     string query = 1;
 }
 
-message SearhcBookResponse {
+message SearchBookResponse {
     repeated Book books = 1;
 }
 
-message BarrowBookRequest {
+message BorrowBookRequest {
     string book_id = 1;
     string user_id = 2;
 }
 
-message BarrowBookResponse {
+message BorrowBookResponse {
     bool success = 1;
 }
 
