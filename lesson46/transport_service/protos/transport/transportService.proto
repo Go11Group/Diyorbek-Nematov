@@ -28,16 +28,15 @@ message TrackBusLocationRequest {
 }
 
 message TrackBusLocationResponse {
-    float latitude = 1;
-    float longitude = 2;
+    string bus_number = 1;
+    string location = 2;
 }
 
 message ReportTrafficJamRequest {
-    string location = 1;
-    string severity = 2;
-    string description = 3;
+    string bus_number = 1;
+    string location = 2;
 }
 
 message ReportTrafficJamResponse {
-    bool success = 1;
+    bool status = 1;
 }
