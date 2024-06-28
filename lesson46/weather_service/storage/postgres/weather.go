@@ -35,7 +35,7 @@ func (w *WeatherRepo) WeatherForecast(wForecast *pb.WeatherForecastRequest) (*pb
 
 	rows, err := w.DB.Query(`
 		SELECT 
-			date, 
+			day, 
 			temperature,
 			humidity,
 			wind_speed
@@ -79,7 +79,7 @@ func (w *WeatherRepo) ReportWeatherCondition(condition *pb.ReportWeatherConditio
 		FROM
 			weather_info
 		WHERE
-			location = $1 and date = $2
+			location = $1 and day = $2
 	`, condition.Location, condition.Date).
 		Scan(&resp.Temperature, &resp.Humidity, &resp.WindSpeed, &resp.Condition)
 

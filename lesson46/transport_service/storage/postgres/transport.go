@@ -50,7 +50,7 @@ func (t *TransportRepo) TrackBusLocation(s *pb.TrackBusLocationRequest) (*pb.Tra
 			bus_number,
 			location
 		FROM
-			transport
+			transport_info
 		WHERE 
 			bus_number = $1
 	`, s.BusNumber).Scan(&resp.BusNumber, &resp.Location)
@@ -65,7 +65,7 @@ func (t *TransportRepo) ReportTrafficJam(r *pb.ReportTrafficJamRequest) (*pb.Rep
 		SELECT
 			status
 		FROM
-			transport
+			transport_info
 		WHERE
 			bus_number = $1 and location = $2
 	`, r.BusNumber, r.Location).Scan(&status.Status)

@@ -15,7 +15,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	db.Close()
+	defer db.Close()
 
 	listener, err := net.Listen("tcp", ":50051")
 	if err != nil {
