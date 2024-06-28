@@ -27,6 +27,7 @@ func main() {
 
 	pb.RegisterWeatherServiceServer(s, &weatherService)
 
+	log.Println("server is running on :50050 ...")
 	if err = s.Serve(listener); err != nil {
 		log.Fatal(err)
 	}

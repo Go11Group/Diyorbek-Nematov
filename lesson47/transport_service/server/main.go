@@ -28,6 +28,7 @@ func main() {
 
 	pb.RegisterTransportServiceServer(s, &transportService)
 
+	log.Println("server is running on :50051 ...")
 	if err = s.Serve(listener); err != nil {
 		log.Fatal(err)
 	}

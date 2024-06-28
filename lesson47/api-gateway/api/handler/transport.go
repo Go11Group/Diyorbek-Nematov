@@ -2,6 +2,7 @@ package handler
 
 import (
 	t "client/generated/transport"
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -9,7 +10,7 @@ import (
 
 func (h *Handler) GetBusScheduleHandler(ctx *gin.Context) {
 	busNumber := ctx.Param("bus_number")
-
+	fmt.Println(busNumber)
 	req := t.GetBusScheduleRequest{BusNumber: busNumber}
 
 	resp, err := h.Transport.GetBusSchedule(ctx, &req)

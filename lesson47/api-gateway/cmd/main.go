@@ -11,7 +11,6 @@ func main() {
 
 	router := api.Router(services)
 
-	log.Println("")
-
-	log.Fatal(router.Run())
+	log.Println("Starting server on port 8080 ... ")
+	log.Fatal(router.Run(":8080"))
 }
