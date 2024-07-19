@@ -2,6 +2,7 @@ package api
 
 import (
 	"students/api/handler"
+	"students/api/middleware"
 
 	"github.com/gin-gonic/gin"
 )
@@ -9,7 +10,10 @@ import (
 func NewRouter(handle *handler.Handler) *gin.Engine {
 	router := gin.Default()
 
-	student := router.Group("api/student")
+	router.Use(middleware.CasbinMiddleware(handle.Enforcer))
+	r := router.Group("/")
+
+	student := r.Group("api/student")
 	{
 		student.POST("/", handle.CreateStudentHandler)
 		student.GET("/", handle.GetStudentsHandler)
@@ -18,7 +22,7 @@ func NewRouter(handle *handler.Handler) *gin.Engine {
 		student.GET("/subjects", handle.GetSubjectsForStudentHandler)
 	}
 
-	subject := router.Group("/api/subject")
+	subject := r.Group("/api/subject")
 	{
 		subject.POST("/", handle.CreateSubjectHandler)
 		subject.GET("/", handle.GetStudentsHandler)
@@ -27,7 +31,7 @@ func NewRouter(handle *handler.Handler) *gin.Engine {
 		subject.GET("/students", handle.GetStudentsForSubjectHandler)
 	}
 
-	router.POST("/api/associate", handle.AssociateStudentWithSubjectHandler)
+	r.POST("/api/associate", handle.AssociateStudentWithSubjectHandler)
 
 	return router
 }
