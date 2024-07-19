@@ -12,9 +12,9 @@ type StudentRepo struct {
 	RDB *redis.Client
 }
 
-func NewStudentRepo(rdb redis.Client) *StudentRepo {
+func NewStudentRepo(rdb *redis.Client) *StudentRepo {
 	return &StudentRepo{
-		RDB: &rdb,
+		RDB: rdb,
 	}
 }
 

@@ -11,9 +11,9 @@ type SubjectRepo struct {
 	RDB *redis.Client
 }
 
-func NewSubjectRepo(rdb redis.Client) *SubjectRepo {
+func NewSubjectRepo(rdb *redis.Client) *SubjectRepo {
 	return &SubjectRepo{
-		RDB: &rdb,
+		RDB: rdb,
 	}
 }
 

@@ -1,0 +1,12 @@
+p, admin, /api/student/*, POST
+p, admin, /api/student/*, GET
+p, admin, /api/student/*, PUT
+p, admin, /api/student/*, DELETE
+p, admin, /api/subject/*, POST
+p, admin, /api/subject/*, GET
+p, admin, /api/subject/*, PUT
+p, admin, /api/subject/*, DELETE
+
+
+p, user, /api/student/*, GET
+p, user, /api/subject/*, GET
