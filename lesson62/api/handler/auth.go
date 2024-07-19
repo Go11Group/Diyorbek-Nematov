@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 	"students/api/token"
 	"students/models"
@@ -10,7 +11,7 @@ import (
 
 func (h *Handler) Register(ctx *gin.Context) {
 	var user models.Register
-	role := ctx.Request.FormValue("role")
+	role := ctx.GetHeader("role")
 
 	if err := ctx.ShouldBindJSON(&user); err != nil {
 		ctx.JSON(http.StatusBadRequest, models.Errors{
@@ -24,7 +25,7 @@ func (h *Handler) Register(ctx *gin.Context) {
 		ctx.JSON(http.StatusInternalServerError, err)
 		return
 	}
-
+	fmt.Println(role)
 	_, eror := h.Enforcer.AddGroupingPolicy(user.Username, role)
 	if eror != nil {
 		ctx.JSON(http.StatusInternalServerError, models.Errors{
@@ -56,8 +57,9 @@ func (h *Handler) Login(ctx *gin.Context) {
 
 	if resp != user.Password {
 		ctx.AbortWithStatusJSON(http.StatusBadRequest, models.Errors{
-			Error: "passwor xatol",
+			Error: "passwor xato",
 		})
+		return
 	}
 
 	newToken, eror := token.GenerateAccessJWT(&models.LoginRequest{

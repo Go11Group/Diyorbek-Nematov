@@ -37,9 +37,10 @@ func CasbinMiddleware(enforcer *casbin.Enforcer) gin.HandlerFunc {
 		}
 
 		if !ok {
-			ctx.JSON(http.StatusForbidden, models.Errors{
-				Error: "",
+			ctx.AbortWithStatusJSON(http.StatusForbidden, models.Errors{
+				Error: "user can only get",
 			})
+			ctx.Abort()
 			return
 		}
 

@@ -6,11 +6,11 @@ type Register struct {
 }
 
 type Login struct {
-	AccessToken  string `json:"access_token"`
+	AccessToken string `json:"access_token"`
 }
 
 type LoginRequest struct {
-	Username string
-	Role     string
-	Password string
+	Username string `json:"username"`
+	Role     string `json:"role"`
+	Password string `json:"password"`
 }

@@ -10,8 +10,10 @@ import (
 func NewRouter(handle *handler.Handler) *gin.Engine {
 	router := gin.Default()
 
-	router.Use(middleware.CasbinMiddleware(handle.Enforcer))
+	router.POST("api/register", handle.Register)
+	router.POST("api/login", handle.Login)
 	r := router.Group("/")
+	r.Use(middleware.CasbinMiddleware(handle.Enforcer))
 
 	student := r.Group("api/student")
 	{
