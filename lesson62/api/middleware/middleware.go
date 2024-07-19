@@ -38,7 +38,7 @@ func CasbinMiddleware(enforcer *casbin.Enforcer) gin.HandlerFunc {
 
 		if !ok {
 			ctx.AbortWithStatusJSON(http.StatusForbidden, models.Errors{
-				Error: "user can only get",
+				Error: "permission denide",
 			})
 			ctx.Abort()
 			return

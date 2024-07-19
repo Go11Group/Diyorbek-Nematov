@@ -34,6 +34,7 @@ func (h *Handler) Register(ctx *gin.Context) {
 		return
 	}
 
+	h.Enforcer.SavePolicy()
 	ctx.JSON(http.StatusOK, resp)
 }
 

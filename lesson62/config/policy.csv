@@ -6,7 +6,7 @@ p, admin, /api/subject/*, POST
 p, admin, /api/subject/*, GET
 p, admin, /api/subject/*, PUT
 p, admin, /api/subject/*, DELETE
-
-
 p, user, /api/student/*, GET
 p, user, /api/subject/*, GET
+
+g, akobirusmonov, user
